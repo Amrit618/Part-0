@@ -1,0 +1,40 @@
+1. SELECT name FROM Movies;
+2. SELECT name, year FROM Movies;
+3. SELECT name FROM Movies WHERE year= '1940';
+4. SELECT name FROM Movies WHERE year<'1950';
+5. SELECT name FROM Movies WHERE year BETWEEN 1940 and 1950;
+6. SELECT name FROM Movies WHERE  year < '1950' OR year >= '1980';
+7.SELECT name FROM Movies WHERE year NOT IN (1940);
+8.SELECT name FROM Movies ORDER BY name;
+9.SELECT name FROM Movies ORDER BY name DESC;
+10.Select name, year FROM Movies ORDER BY year DESC , name ASC;
+11.SELECT DISTINCT forename FROM Names;
+12.SELECT DISTINCT forename, surname FROM Names;
+13.SELECT COUNT(*) FROM Employees;
+14.SELECT COUNT(*) FROM employees WHERE salary > 2000;
+15.SELECT SUM(salary) FROM employees;
+16.SELECT MAX(salary) FROM Employees;
+17.SELECT COUNT(DISTINCT company) FROM Employees;
+18.SELECT company, COUNT(*) FROM Employees GROUP BY company;
+19.SELECT company, MAX(Salary) FROM Employees GROUP BY company;
+20.SELECT company , max(salary) from Employees WHERE salary >=5000 GROUP BY company;
+21.SELECT Players.name ,Results.score FROM Players , Results WHERE Players.id  = Results.player_id;
+22.SELECT Players.name ,Results.score FROM Players , Results WHERE Players.id  = Results.player_id AND Players.name = "Uolevi";
+23.SELECT Players.name ,Results.score FROM Players , Results WHERE Players.id  = Results.player_id AND Results.score > 250;
+24.SELECT Players.name ,Results.score FROM Players , Results WHERE Players.id  = Results.player_id ORDER BY Results.score DESC , Players.name ASC;
+25.SELECT Players.name ,max(Results.score) FROM Players , Results WHERE Players.id  = Results.player_id GROUP BY Players.name;
+26.SELECT Players.name ,count(Results.score) FROM Players , Results WHERE Players.id  = Results.player_id GROUP BY Players.name;
+27.SELECT Students.name , Courses.name , Gradings.grade FROM Students, Courses , Gradings WHERE Students.id = Gradings.student_id AND Courses.id = Gradings.course_id;
+28.SELECT  Courses.name , Gradings.grade FROM Students, Courses , Gradings WHERE Students.id = Gradings.student_id AND Courses.id = Gradings.course_id AND Students.name= "Uolevi";
+29.SELECT  Students.name , Gradings.grade FROM Students, Courses , Gradings WHERE Students.id = Gradings.student_id AND Courses.id = Gradings.course_id AND Courses.name= "Basic Coding";
+30.SELECT Students.name, Courses.name , Gradings.grade from Gradings INNER JOIN Courses ON Gradings.course_id = Courses.id INNER JOIN Students ON Students.id = Gradings.student_id WHERE Gradings.grade >=4;
+31.SELECT Students.name,count(Gradings.grade) from Gradings JOIN Students ON Students.id = Gradings.student_id GROUP BY Students.name;
+32.SELECT Students.name,  max(Gradings.grade) from Gradings INNER JOIN Courses ON Gradings.course_id = Courses.id INNER JOIN Students ON Students.id = Gradings.student_id GROUP BY Students.name;
+33.
+34.
+35.
+36.
+37.
+38.
+39.
+40. 
